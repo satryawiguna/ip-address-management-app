@@ -1,6 +1,36 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
+import { updateAuth } from "../../features/authSlice";
+import { useNavigate } from "react-router-dom";
+import AxiosJwt from "../../utils/AxiosJwt";
 
 const AdminNavbar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { nickName, email } = useSelector((state) => state.auth);
+
+  const actionLogout = async () => {
+    try {
+      const logout = await AxiosJwt.post(`/auth/logout`, { email: email });
+
+      if (logout.data.type === "SUCCESS") {
+        dispatch(
+          updateAuth({
+            logged: false,
+            fullName: null,
+            nickName: null,
+            email: null,
+          })
+        );
+        navigate("/", { replace: true });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <nav
       className="navbar is-light"
@@ -37,9 +67,12 @@ const AdminNavbar = () => {
           </div>
 
           <div className="navbar-end">
+            <div className="navbar-item">Hello, {nickName}</div>
             <div className="navbar-item">
               <div className="buttons">
-                <button className="button is-light">Log out</button>
+                <button onClick={actionLogout} className="button is-light">
+                  Log out
+                </button>
               </div>
             </div>
           </div>

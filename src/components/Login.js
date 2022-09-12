@@ -34,14 +34,16 @@ const Login = () => {
         dispatch(
           updateAuth({
             logged: true,
-            fullName: login.data.fullName,
-            nickName: login.data.nickName,
-            email: login.data.email,
+            fullName: login.data.data.full_name,
+            nickName: login.data.data.nick_name,
+            email: login.data.data.email,
           })
         );
 
-        localStorage.setItem("access_token", login.data.token.access_token);
-        localStorage.setItem("refresh_token", login.data.token.refresh_token);
+        localStorage.setItem(
+          "access_token",
+          login.data.data.token.access_token
+        );
 
         navigate("/admin/dashboard", { replace: true });
       }

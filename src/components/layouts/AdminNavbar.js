@@ -67,6 +67,9 @@ const AdminNavbar = () => {
             <a href="/admin/ip-address" className="navbar-item">
               IP Address
             </a>
+            <a href="/admin/label" className="navbar-item">
+              Label/Comment
+            </a>
           </div>
 
           <div className="navbar-end">

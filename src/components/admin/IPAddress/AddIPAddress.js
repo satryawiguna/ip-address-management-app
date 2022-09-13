@@ -4,9 +4,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AxiosJwt from "../../../utils/AxiosJwt";
 import Message from "../../Message";
-import Select from "react-select";
 import CreatableSelect from "react-select/creatable";
-import { ActionMeta, OnChangeValue } from "react-select";
 import { labelSelectors, fetchLabel } from "../../../features/labelSlice";
 import { useSelector, useDispatch } from "react-redux";
 

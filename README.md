@@ -18,8 +18,14 @@ REACT_APP_FINGER_PRINT=7b347d54b1bb31c4ff83180cfc0bdbc8aa6a22c9
 ```
 
 ## Attachment
-![DB Diagram](dbdesign.png)
+![Login Page](login.jpg)
 
-![DB Diagram](postman.png)  
+![Register Page](register.jpg)
+
+![Dashboard Page](dashboard.jpg)
+
+![IP Address Page](ip-address.jpg)
+
+![Label Page](label.jpg)
 
 

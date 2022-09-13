@@ -64,10 +64,15 @@ const AdminNavbar = () => {
             <a href="/admin/dashboard" className="navbar-item">
               Dashboard
             </a>
+            <a href="/admin/ip-address" className="navbar-item">
+              IP Address
+            </a>
           </div>
 
           <div className="navbar-end">
-            <div className="navbar-item">Hello, {nickName}</div>
+            <div className="navbar-item">
+              Hello, <strong>{nickName ? nickName : "Annonymous"}</strong>
+            </div>
             <div className="navbar-item">
               <div className="buttons">
                 <button onClick={actionLogout} className="button is-light">

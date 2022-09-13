@@ -8,7 +8,6 @@ import {
 } from "../../../features/ipAddressSlice";
 import { labelSelectors, fetchLabel } from "../../../features/labelSlice";
 import CreatableSelect from "react-select/creatable";
-import { ActionMeta, OnChangeValue } from "react-select";
 import Message from "../../Message";
 import AxiosJwt from "../../../utils/AxiosJwt";
 
@@ -27,6 +26,7 @@ const EditIPAddress = () => {
   const ipAddress = useSelector((state) =>
     ipAddressSelectors.selectById(state, id)
   );
+
   const labels = useSelector(labelSelectors.selectAll);
 
   useEffect(() => {

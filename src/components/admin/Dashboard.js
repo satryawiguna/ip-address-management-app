@@ -12,7 +12,7 @@ const Dashboard = () => {
     <AdminLayout>
       <div className="container mt-5">
         <h1>
-          Welcome back <strong>{fullName}</strong>
+          Welcome back <strong>{fullName ? fullName : "Annonymous"}</strong>
         </h1>
         {email}
       </div>

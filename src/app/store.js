@@ -4,9 +4,13 @@ import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 
 import authReducer from "../features/authSlice";
+import ipAddressReducer from "../features/ipAddressSlice";
+import labelReducer from "../features/labelSlice";
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  ipAddress: ipAddressReducer,
+  label: labelReducer,
 });
 
 const persistConfig = {

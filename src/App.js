@@ -8,6 +8,7 @@ import LogIPAddress from "./components/admin/IPAddress/LogIPAddress";
 import LabelComment from "./components/admin/LabelComment";
 import AddLabelComment from "./components/admin/LabelComment/AddLabelComment";
 import EditLabelComment from "./components/admin/LabelComment/EditLabelComment";
+import Log from "./components/admin/Log";
 import Login from "./components/Login";
 import Register from "./components/Register";
 
@@ -26,6 +27,8 @@ function App() {
       <Route path="/admin/label" element={<LabelComment />} />
       <Route path="/admin/label/add" element={<AddLabelComment />} />
       <Route path="/admin/label/:id" element={<EditLabelComment />} />
+
+      <Route path="/admin/log" element={<Log />} />
     </Routes>
   );
 }

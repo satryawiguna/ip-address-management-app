@@ -6,11 +6,13 @@ import thunk from "redux-thunk";
 import authReducer from "../features/authSlice";
 import ipAddressReducer from "../features/ipAddressSlice";
 import labelReducer from "../features/labelSlice";
+import logReducer from "../features/logSlice";
 
 const rootReducer = combineReducers({
   auth: authReducer,
   ipAddress: ipAddressReducer,
   label: labelReducer,
+  log: logReducer,
 });
 
 const persistConfig = {

@@ -70,6 +70,9 @@ const AdminNavbar = () => {
             <a href="/admin/label" className="navbar-item">
               Label/Comment
             </a>
+            <a href="/admin/log" className="navbar-item">
+              Logs
+            </a>
           </div>
 
           <div className="navbar-end">
